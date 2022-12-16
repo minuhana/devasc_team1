@@ -26,4 +26,4 @@ class MovieApi(Resource):
     @jwt_required()
     def delete(self, id):
         Movie.objects.get(id=id).delete()
-        return 'Movie was successfully deleted'. 200
+        return 'Movie was successfully deleted', 200
